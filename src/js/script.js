@@ -62,6 +62,7 @@
       thisProduct.data = data;
 
       thisProduct.renderInMenu();
+      thisProduct.initAccordion();
 
       console.log('new Product:', thisProduct);
     }
@@ -69,14 +70,28 @@
     renderInMenu() {
       const thisProduct = this;
 
-      /* TODO: generate HTML based on template */
       const generatedHTML = templates.menuProduct(thisProduct.data);
-      /* TODO: create element using utils.createElementFromHTML */
       thisProduct.element = utils.createDOMFromHTML(generatedHTML);
-      /* TODO: find menu container */
       const menuContainer = document.querySelector(select.containerOf.menu);
-      /* TODO: add element to menu */
       menuContainer.appendChild(thisProduct.element);
+    }
+
+    initAccordion() {
+      const thisProduct = this;
+      const clickableTrigger = thisProduct.element.querySelector(
+        select.menuProduct.clickable
+      );
+      clickableTrigger.addEventListener('click', function (event) {
+        event.preventDefault();
+        const products = document.querySelectorAll('.product');
+        for (let element of products) {
+          if (element != thisProduct.element) {
+            element.classList.remove('active');
+          } else {
+            element.classList.toggle('active');
+          }
+        }
+      });
     }
   }
 
