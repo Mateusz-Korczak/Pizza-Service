@@ -83,12 +83,12 @@
       );
       clickableTrigger.addEventListener('click', function (event) {
         event.preventDefault();
-        const products = document.querySelectorAll('.product');
+        const products = document.querySelectorAll(select.all.menuProducts);
         for (let element of products) {
           if (element != thisProduct.element) {
-            element.classList.remove('active');
+            element.classList.remove(classNames.menuProduct.wrapperActive);
           } else {
-            element.classList.toggle('active');
+            element.classList.toggle(classNames.menuProduct.wrapperActive);
           }
         }
       });
