@@ -214,7 +214,7 @@
     }
 
     addToCard() {
-      const thisProduct = this;
+      // const thisProduct = this;
 
       app.cart.add(this.prepareCartProduct());
     }
@@ -354,7 +354,7 @@
     }
 
     add(menuProduct) {
-      const thisCart = this;
+      // const thisCart = this;
       console.log('adding product', menuProduct);
     }
   }
