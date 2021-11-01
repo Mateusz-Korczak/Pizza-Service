@@ -66,8 +66,8 @@
   const settings = {
     amountWidget: {
       defaultValue: 1,
-      defaultMin: 1,
-      defaultMax: 9,
+      defaultMin: 0,
+      defaultMax: 10,
     },
     cart: {
       defaultDeliveryFee: 20,
@@ -253,10 +253,10 @@
           const option = param.options[optionId];
           const optionSelected =
             formData[paramId] && formData[paramId].includes(optionId);
-
+          console.log(formData);
           if (optionSelected) {
             params[paramId].options = {
-              [optionId]: option.label,
+              [formData[paramId]]: option,
             };
           }
         }
