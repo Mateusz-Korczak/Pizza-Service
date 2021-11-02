@@ -234,30 +234,22 @@
 
     prepareCartProductParams() {
       const thisProduct = this;
-
       const formData = utils.serializeFormToObject(thisProduct.form);
       const params = {};
 
-      // for very category (param)
       for (let paramId in thisProduct.data.params) {
         const param = thisProduct.data.params[paramId];
-
-        // create category param in params const eg. params = { ingredients: { name: 'Ingredients', options: {}}}
         params[paramId] = {
           label: param.label,
           options: {},
         };
 
-        // for every option in this category
         for (let optionId in param.options) {
           const option = param.options[optionId];
           const optionSelected =
             formData[paramId] && formData[paramId].includes(optionId);
-          console.log(formData);
           if (optionSelected) {
-            params[paramId].options = {
-              [formData[paramId]]: option,
-            };
+            params[paramId].options[optionId] = option.label;
           }
         }
       }
@@ -366,14 +358,9 @@
       const thisCart = this;
       console.log('thisCart: ', this);
       console.log('adding product', menuProduct);
-
       const generatedHTML = templates.cartProduct(menuProduct);
-      console.log(generatedHTML);
       const generatedDOM = utils.createDOMFromHTML(generatedHTML);
-      console.log(generatedDOM);
       thisCart.dom.productList.appendChild(generatedDOM);
-      // const menuContainer = document.querySelector(select.containerOf.menu);
-      // menuContainer.appendChild(thisCart.element);
     }
   }
 
