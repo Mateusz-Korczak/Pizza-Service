@@ -390,9 +390,9 @@
       thisCartProduct.id = menuProduct.id;
       thisCartProduct.name = menuProduct.name;
       thisCartProduct.amount = menuProduct.amount;
-      thisCartProduct.priceSingle = menuProduct.price;
       thisCartProduct.params = menuProduct.params;
-      thisCartProduct.price;
+      thisCartProduct.priceSingle = menuProduct.priceSingle;
+      thisCartProduct.price = menuProduct.price;
 
       thisCartProduct.getElements(element);
       thisCartProduct.initAmountWidget();
