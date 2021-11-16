@@ -9,7 +9,7 @@ class CartProduct {
     thisCartProduct.amount = menuProduct.amount;
     thisCartProduct.params = menuProduct.params;
     thisCartProduct.priceSingle = menuProduct.priceSingle;
-    thisCartProduct.price = menuProduct.price;
+    thisCartProduct.price = menuProduct.priceSingle * menuProduct.amount;
     thisCartProduct.getElements(element);
 
     thisCartProduct.initAmountWidget();

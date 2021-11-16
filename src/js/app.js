@@ -1,8 +1,19 @@
 import { settings, select, classNames } from './settings.js';
 import Product from './components/Product.js';
 import Cart from './components/Cart.js';
+import Booking from './components/Booking.js';
 
 const app = {
+  /* DONE: Następnie przejdź do pliku App.js. Zaimportuj w nim klasę Booking oraz stwórz metodę app.initBooking, która będzie zajmować się inicjacją instancji tej klasy. */
+  initBooking: function () {
+    const thisApp = this;
+    /* DONE: znajdowała kontener widgetu do rezerwacji stron, którego selektor mamy zapisany w select.containerOf.booking, */
+    thisApp.bookingWidget = document.querySelector(select.containerOf.booking);
+    /* DONE: tworzyła nową instancję klasy Booking i przekazywała do konstruktora kontener, który przed chwilą znaleźliśmy, */
+    thisApp.booking = new Booking(thisApp.bookingWidget);
+    /* DONE: była wywoływana na końcu metody app.init */
+  },
+
   initPages: function () {
     const thisApp = this;
 
@@ -18,7 +29,7 @@ const app = {
         break;
       }
     }
-    thisApp.activatePage(idFromHash);
+    thisApp.activatePage(pageMatchingHash);
 
     for (let link of thisApp.navLinks) {
       link.addEventListener('click', function (event) {
@@ -85,6 +96,7 @@ const app = {
     thisApp.initPages();
     thisApp.initData();
     thisApp.initCart();
+    thisApp.initBooking();
   },
 
   initCart: function () {

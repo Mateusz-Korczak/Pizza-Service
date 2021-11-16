@@ -60,7 +60,7 @@ class Cart {
   }
 
   add(menuProduct) {
-    console.log(menuProduct);
+    // console.log(menuProduct);
     const thisCart = this;
     const generatedHTML = templates.cartProduct(menuProduct);
     const generatedDOM = utils.createDOMFromHTML(generatedHTML);
@@ -72,16 +72,18 @@ class Cart {
 
   update() {
     const thisCart = this;
+
     const deliveryFee = settings.cart.defaultDeliveryFee;
     thisCart.totalNumber = 0;
     thisCart.subtotalPrice = 0;
     thisCart.totalPrice = 0;
+
     for (const product of thisCart.products) {
       thisCart.totalNumber += product.amount;
       thisCart.subtotalPrice += product.price;
     }
     this.totalPrice = thisCart.subtotalPrice + deliveryFee;
-    console.log(thisCart.subtotalPrice);
+    // console.log(thisCart.subtotalPrice);
     if (thisCart.products) {
       thisCart.dom.deliveryFee.innerHTML = deliveryFee;
     }

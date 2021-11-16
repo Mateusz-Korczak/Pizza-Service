@@ -1,6 +1,6 @@
 import { classNames, select } from '../settings.js';
 import { utils } from '../utils.js';
-import AmountWidget from './amountWidget.js ';
+import AmountWidget from './AmountWidget.js ';
 class Product {
   constructor(id, data) {
     const thisProduct = this;
@@ -141,7 +141,6 @@ class Product {
   addToCard() {
     const thisProduct = this;
     thisProduct.name = thisProduct.data.name;
-
     thisProduct.amount = thisProduct.amountWidget.value;
 
     // app.cart.add(this.prepareCartProduct());
