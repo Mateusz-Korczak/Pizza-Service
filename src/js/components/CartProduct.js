@@ -11,7 +11,7 @@ class CartProduct {
     thisCartProduct.priceSingle = menuProduct.priceSingle;
     thisCartProduct.price = menuProduct.priceSingle * menuProduct.amount;
     thisCartProduct.getElements(element);
-
+    // thisCartProduct.dom.price.innerHTML = thisCartProduct.price;
     thisCartProduct.initAmountWidget();
     thisCartProduct.initActions();
   }
@@ -44,6 +44,7 @@ class CartProduct {
     thisCartProduct.amountWidget = new AmountWidget(
       thisCartProduct.dom.amountWidget
     );
+    thisCartProduct.dom.price.innerHTML = thisCartProduct.price;
     thisCartProduct.dom.amountWidget.input.value = thisCartProduct.amount;
     thisCartProduct.dom.amountWidget.addEventListener('updated', () => {
       thisCartProduct.amount = thisCartProduct.amountWidget.input.value;
