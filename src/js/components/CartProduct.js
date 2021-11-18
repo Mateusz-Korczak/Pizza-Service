@@ -11,7 +11,6 @@ class CartProduct {
     thisCartProduct.priceSingle = menuProduct.priceSingle;
     thisCartProduct.price = menuProduct.priceSingle * menuProduct.amount;
     thisCartProduct.getElements(element);
-    // thisCartProduct.dom.price.innerHTML = thisCartProduct.price;
     thisCartProduct.initAmountWidget();
     thisCartProduct.initActions();
   }

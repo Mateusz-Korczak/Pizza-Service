@@ -1,5 +1,5 @@
 import { select, classNames, settings, templates } from '../settings.js';
-import { utils } from '../utils.js';
+import utils from '../utils.js';
 import CartProduct from './CartProduct.js';
 
 class Cart {
@@ -60,7 +60,6 @@ class Cart {
   }
 
   add(menuProduct) {
-    // console.log(menuProduct);
     const thisCart = this;
     const generatedHTML = templates.cartProduct(menuProduct);
     const generatedDOM = utils.createDOMFromHTML(generatedHTML);
@@ -83,7 +82,7 @@ class Cart {
       thisCart.subtotalPrice += product.price;
     }
     this.totalPrice = thisCart.subtotalPrice + deliveryFee;
-    // console.log(thisCart.subtotalPrice);
+
     if (thisCart.products) {
       thisCart.dom.deliveryFee.innerHTML = deliveryFee;
     }

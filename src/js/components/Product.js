@@ -1,5 +1,5 @@
 import { classNames, select } from '../settings.js';
-import { utils } from '../utils.js';
+import utils from '../utils.js';
 import AmountWidget from './AmountWidget.js ';
 class Product {
   constructor(id, data) {
@@ -18,7 +18,7 @@ class Product {
 
   renderInMenu() {
     const thisProduct = this;
-
+    console.log(thisProduct);
     const generatedHTML = Handlebars.compile(
       document.querySelector(select.templateOf.menuProduct).innerHTML
     )(thisProduct.data);
@@ -136,6 +136,8 @@ class Product {
     thisProduct.priceSingle = price;
     price *= thisProduct.amountWidget.value;
     thisProduct.priceElem.innerHTML = price;
+    console.log(thisProduct.amountWidget.value);
+    thisProduct.amountWidget.value = thisProduct.amount;
   }
 
   addToCard() {
@@ -143,7 +145,6 @@ class Product {
     thisProduct.name = thisProduct.data.name;
     thisProduct.amount = thisProduct.amountWidget.value;
 
-    // app.cart.add(this.prepareCartProduct());
     const event = new CustomEvent('add-to-cart', {
       bubbles: true,
       detail: {
