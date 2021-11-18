@@ -14,7 +14,7 @@ class Booking {
     // console.log('element from Booking render method: ', element);
     const thisBooking = this;
     const generatedHTML = templates.bookingWidget();
-    console.log('generated HTML: ', generatedHTML);
+    // console.log('generated HTML: ', generatedHTML);
     /* DONE: utworzenie pustego obiektu thisBooking.dom, */
     thisBooking.dom = {
       /* DONE: dodanie do tego obiektu właściwości wrapper i przypisanie do niej referencji do kontenera (jest dostępna w argumencie metody), */
@@ -22,8 +22,8 @@ class Booking {
       peopleAmount: document.querySelector(select.booking.peopleAmount),
       hoursAmount: document.querySelector(select.booking.hoursAmount),
     };
-    console.log(thisBooking.dom.peopleAmount);
-    console.log(thisBooking.dom.hoursAmount);
+    // console.log(thisBooking.dom.peopleAmount);
+    // console.log(thisBooking.dom.hoursAmount);
     /* DONE: zmiana zawartości wrappera (innerHTML) na kod HTML wygenerowany z szablonu.*/
   }
 
@@ -37,10 +37,10 @@ class Booking {
       thisBooking.dom.hoursAmount
     );
     thisBooking.dom.peopleAmount.addEventListener('click', () => {
-      console.log('siema');
+      // console.log('siema');
     });
     thisBooking.dom.hoursAmount.addEventListener('click', () => {
-      console.log('siema');
+      // console.log('siema');
     });
     // console.log('Booking initWidgets method is working');
   }
