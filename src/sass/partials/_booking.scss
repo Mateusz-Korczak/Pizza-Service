@@ -188,6 +188,10 @@
         opacity: 0.4;
       }
     }
+
+    &.selected {
+      background-color: green;
+    }
   }
 
   [data-table='1'] {

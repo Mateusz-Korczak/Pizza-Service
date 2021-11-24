@@ -7,7 +7,6 @@ class Product {
 
     thisProduct.id = id;
     thisProduct.data = data;
-
     thisProduct.renderInMenu();
     thisProduct.getElements();
     thisProduct.initAccordion();
@@ -18,7 +17,6 @@ class Product {
 
   renderInMenu() {
     const thisProduct = this;
-    console.log(thisProduct);
     const generatedHTML = Handlebars.compile(
       document.querySelector(select.templateOf.menuProduct).innerHTML
     )(thisProduct.data);
@@ -57,6 +55,7 @@ class Product {
     const thisProduct = this;
 
     thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+
     thisProduct.amountWidgetElem.addEventListener('updated', () => {
       thisProduct.processOrder();
     });
@@ -136,8 +135,6 @@ class Product {
     thisProduct.priceSingle = price;
     price *= thisProduct.amountWidget.value;
     thisProduct.priceElem.innerHTML = price;
-    console.log(thisProduct.amountWidget.value);
-    thisProduct.amountWidget.value = thisProduct.amount;
   }
 
   addToCard() {
@@ -145,6 +142,7 @@ class Product {
     thisProduct.name = thisProduct.data.name;
     thisProduct.amount = thisProduct.amountWidget.value;
 
+    // app.cart.add(this.prepareCartProduct());
     const event = new CustomEvent('add-to-cart', {
       bubbles: true,
       detail: {
