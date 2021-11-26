@@ -21,8 +21,10 @@
           <h2 class="logo__subtitle">the best homemade Italian food</h2>
         </div>
         <div class="main-nav">
+          <a href="#home">Home</a>
           <a href="#order">Order</a>
           <a href="#booking">Booking</a>
+
         </div>
         <div id="cart" class="cart">
           <div class="cart__summary">
@@ -62,12 +64,16 @@
   </header>
 
   <div id="pages">
+    <section id="home">
+      <div class="home-wrapper container"></div>
+    </section>
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
     <section id="booking">
       <div class="booking-wrapper container"></div>
     </section>
+
   </div>
 
   <script id="template-cart-product" type="text/x-handlebars-template">
@@ -242,6 +248,41 @@
       </form>
     </div>
   </script>
+
+
+  <script id="template-home-widget" type="text/x-handlebars-template">
+    <div class="home-widget">
+      <div class="home-wrapper">
+        <section class="page-links main-nav">
+          <a href="#order"><div class="order-link">
+            <span>Order</span>
+            <span>Delicious food delivered to your home</span>
+          </div></a>
+   
+
+
+          <div class="book-ink"></div>
+          <div class="work-hours"></div>
+        </section>
+  
+        <section class="opinions">
+          <div class="carousel"></div>
+        </section>
+  
+        <section class="gallery">
+          <div class="pic"></div>
+          <div class="pic"></div>
+          <div class="pic"></div>
+          <div class="pic"></div>
+          <div class="pic"></div>
+          <div class="pic"></div>
+        </section>
+
+        <footer class="footer"></footer>
+      </div>
+    </div>
+  </script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

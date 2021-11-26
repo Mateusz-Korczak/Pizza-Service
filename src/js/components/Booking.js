@@ -228,7 +228,6 @@ class Booking {
     );
     thisBooking.dom.starters =
       thisBooking.dom.wrapper.querySelectorAll('.checkbox input');
-    console.log(thisBooking.dom.starters);
   }
 
   /*----------------------------------*/
