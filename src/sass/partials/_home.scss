@@ -70,10 +70,12 @@
       transform: translateY(100px);
       transition: 0.2s;
     }
+
     .span-wrapper:hover span {
       transform: translateY(0);
     }
   }
+
   a.order-link {
     background-image: url('../../images/assets/pizza-1.jpg');
     margin-right: 5px;
@@ -83,6 +85,7 @@
     background-image: url('../../images/assets/pizza-2.jpg');
     margin-left: 5px;
   }
+
   .work-hours {
     height: 15vh;
     width: 100%;
@@ -96,6 +99,7 @@
       text-align: center;
       height: 10vh;
     }
+
     span + span {
       text-transform: capitalize;
     }
