@@ -8,9 +8,9 @@
   }
 }
 
-* {
-  box-sizing: border-box;
-}
+// * {
+//   //   box-sizing: border-box;
+// }
 
 .home-widget {
   transform: opacity 500ms;
@@ -27,36 +27,77 @@
   border-radius: $radius;
 }
 
-/* section nav */
+/* SECTION LINKS */
+.page-links {
+  display: flex;
+  width: 100%;
 
-.order-link {
-  height: 15vh;
-  //   position: relative;
-  background-image: url('../../images/assets/pizza-1.jpg');
-  background-position: center center;
-  background-size: cover;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: white;
+  font-size: 2vh;
   text-align: center;
-  justify-content: center;
-  width: 50%;
-}
 
-.home-wrapper .main-nav a {
-  color: white;
-}
+  a {
+    text-decoration: none;
+    color: white;
+    width: calc(50% - 5px);
+    height: 20vh;
+    background-size: cover;
+    margin-bottom: 10px;
 
-.order-link span {
-  display: block;
-  color: white;
-  font-weight: bold;
-  font-size: 32px;
-  font-size: 24px;
-  width: 100%;
-}
+    .span-wrapper {
+      overflow: hidden;
 
-.order-link span + span {
-  display: block;
-  color: white;
-  font-weight: lighter;
-  font-size: 24px;
-  width: 100%;
+      span {
+        display: block;
+        height: 10vh;
+        text-transform: uppercase;
+      }
+
+      span + span {
+        display: block;
+        font-size: 2.5vh;
+        height: 10vh;
+        text-transform: capitalize;
+        font-style: italic;
+      }
+    }
+  }
+
+  @media (hover: hover) {
+    .span-wrapper span {
+      transform: translateY(100px);
+      transition: 0.2s;
+    }
+    .span-wrapper:hover span {
+      transform: translateY(0);
+    }
+  }
+  a.order-link {
+    background-image: url('../../images/assets/pizza-1.jpg');
+    margin-right: 5px;
+  }
+
+  a.booking-link {
+    background-image: url('../../images/assets/pizza-2.jpg');
+    margin-left: 5px;
+  }
+  .work-hours {
+    height: 15vh;
+    width: 100%;
+    font-size: 3vh;
+    background-color: orangered;
+    margin-bottom: 10vh;
+
+    span {
+      display: block;
+      text-transform: uppercase;
+      text-align: center;
+      height: 10vh;
+    }
+    span + span {
+      text-transform: capitalize;
+    }
+  }
 }

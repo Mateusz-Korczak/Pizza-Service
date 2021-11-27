@@ -977,4 +977,111 @@ select.error {
           justify-content: space-between;
   margin: 48px auto;
 }
+
+#pages > * {
+  display: none;
+}
+
+#pages > .active {
+  display: block;
+}
+
+.home-widget {
+  -webkit-transform: opacity 500ms;
+          transform: opacity 500ms;
+}
+
+.home-widget.loading {
+  opacity: 0.25;
+}
+
+.home-wrapper {
+  margin: 42px auto;
+  padding: 72px 48px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+/* SECTION LINKS */
+.page-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-decoration: none;
+  color: white;
+  font-size: 2vh;
+  text-align: center;
+}
+
+.page-links a {
+  text-decoration: none;
+  color: white;
+  width: calc(50% - 5px);
+  height: 20vh;
+  background-size: cover;
+  margin-bottom: 10px;
+}
+
+.page-links a .span-wrapper {
+  overflow: hidden;
+}
+
+.page-links a .span-wrapper span {
+  display: block;
+  height: 10vh;
+  text-transform: uppercase;
+}
+
+.page-links a .span-wrapper span + span {
+  display: block;
+  font-size: 2.5vh;
+  height: 10vh;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+@media (hover: hover) {
+  .page-links .span-wrapper span {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .page-links .span-wrapper:hover span {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.page-links a.order-link {
+  background-image: url("../../images/assets/pizza-1.jpg");
+  margin-right: 5px;
+}
+
+.page-links a.booking-link {
+  background-image: url("../../images/assets/pizza-2.jpg");
+  margin-left: 5px;
+}
+
+.page-links .work-hours {
+  height: 15vh;
+  width: 100%;
+  font-size: 3vh;
+  background-color: orangered;
+  margin-bottom: 10vh;
+}
+
+.page-links .work-hours span {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  height: 10vh;
+}
+
+.page-links .work-hours span + span {
+  text-transform: capitalize;
+}
 /*# sourceMappingURL=style.css.map */
