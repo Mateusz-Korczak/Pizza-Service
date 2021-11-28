@@ -39,6 +39,7 @@
   text-align: center;
 
   a {
+    border-radius: 5px;
     text-decoration: none;
     color: white;
     width: calc(50% - 5px);
@@ -87,6 +88,7 @@
   }
 
   .work-hours {
+    border-radius: 5px;
     height: 15vh;
     width: 100%;
     font-size: 3vh;
@@ -109,6 +111,7 @@
 /* COROUSEL */
 .opinions {
   padding: 20px;
+  margin-bottom: 10vh;
 }
 
 .carousel {
@@ -155,3 +158,72 @@
 //   font-size: 80px;
 //   color: white;
 // }
+/* GALLERY */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery > .pic-wrapper {
+  position: relative;
+  flex: 0 0 32%;
+  min-height: 150px;
+  margin-bottom: 2%;
+}
+
+.pic-wrapper .icons-wrapper {
+  position: absolute;
+  font-size: 24px;
+  color: rgb(221, 0, 0);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  opacity: 0;
+}
+
+.pic-image {
+  position: absolute;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+}
+
+.pic-image:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  opacity: 0.3;
+}
+
+.pic-image:hover::after {
+  background-color: black;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.pic-image:hover .icons-wrapper {
+  z-index: 2;
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.icons-wrapper i:hover {
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+.pic-image img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
