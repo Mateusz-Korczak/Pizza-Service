@@ -1,5 +1,4 @@
 import { select, templates } from '../settings.js';
-// import Flickity from '../../vendor/flickity.pkgd.min.js';
 
 class Home {
   constructor(element) {
@@ -45,19 +44,6 @@ class Home {
     thisHome.dom.starters =
       thisHome.dom.wrapper.querySelectorAll('.checkbox input');
     console.log(thisHome.dom.starters);
-  }
-
-  initWidgets() {
-    const thisHome = this;
-
-    // const elem = document.querySelector('.main-carousel');
-    // const flkty = new Flickity(elem, {
-    //   // options
-    //   cellAlign: 'left',
-    //   contain: true,
-    // });
-
-    console.log(thisHome);
   }
 }
 

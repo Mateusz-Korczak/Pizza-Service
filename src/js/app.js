@@ -21,25 +21,20 @@ const app = {
 
   initPages: function () {
     const thisApp = this;
-    // pobierana jest zawartość stron w formie tablicy
+
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
-    // pobierane są linki do strony (buttony)
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
-    // po stronie wpisanej strony zamień wytnij #/ z adresu
     const idFromHash = window.location.hash.replace('#/', '');
-    // defaultowo strona pierwsza
     let pageMatchingHash = thisApp.pages[0].id;
-    // dla wszystkich stron wprowadzony adres jesli pokrywa się z id to wybierz strone
+
     for (let page of thisApp.pages) {
       if (page.id == idFromHash) {
         pageMatchingHash = page.id;
         break;
       }
     }
-    // i tą stronę aktywuj
     thisApp.activatePage(pageMatchingHash);
 
-    // pętla do włączania strony przez link:
     for (let link of thisApp.navLinks) {
       link.addEventListener('click', function (event) {
         const clickedElement = this;
