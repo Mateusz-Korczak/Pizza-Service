@@ -8,10 +8,6 @@
   }
 }
 
-// * {
-//   //   box-sizing: border-box;
-// }
-
 .home-widget {
   transform: opacity 500ms;
 
@@ -116,7 +112,6 @@
 
 .carousel {
   height: 200px;
-  // background: blue;
   box-sizing: border-box;
 }
 
@@ -149,15 +144,7 @@
 .flickity-prev-next-button.next {
   display: none;
 }
-// /* cell number */
-// .carousel-cell:before {
-//   display: block;
-//   text-align: center;
-//   content: counter(gallery-cell);
-//   line-height: 200px;
-//   font-size: 80px;
-//   color: white;
-// }
+
 /* GALLERY */
 
 .gallery {
