@@ -50,6 +50,7 @@ export const select = {
   },
   nav: {
     links: '.main-nav a',
+    homeLinks: '.page-links a',
   },
   cart: {
     productList: '.cart__order-summary',
