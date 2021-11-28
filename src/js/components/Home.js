@@ -1,4 +1,5 @@
 import { select, templates } from '../settings.js';
+// import Flickity from '../../vendor/flickity.pkgd.min.js';
 
 class Home {
   constructor(element) {
@@ -48,6 +49,13 @@ class Home {
 
   initWidgets() {
     const thisHome = this;
+
+    // const elem = document.querySelector('.main-carousel');
+    // const flkty = new Flickity(elem, {
+    //   // options
+    //   cellAlign: 'left',
+    //   contain: true,
+    // });
 
     console.log(thisHome);
   }

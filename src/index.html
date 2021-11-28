@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="./vendor/range-slider.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <!-- <link rel="stylesheet" href="../src/vendor/flickity.css" media="screen"> -->
 </head>
 <body>
 
@@ -274,7 +276,42 @@
         </section>
   
         <section class="opinions">
-          <div class="carousel"></div>
+          <div class="carousel" data-flickity='{ "autoPlay": true }'>
+            <div class="carousel-cell">
+              <img src="../../images/assets/pizza-3.jpg" alt="">
+              <div class="opinion">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, explicabo!</p>
+                <h5>Tatiana Langus</h5>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img src="../../images/assets/pizza-4.jpg" alt="">
+              <div class="opinion">
+                <h1>Title 2</h1>
+                <p>Gorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, explicabo!</p>
+                <h5>Tomas Langus</h5>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img src="../../images/assets/pizza-5.jpg" alt="">
+              <div class="opinion">
+                <h1>Title 3</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, explicabo!</p>
+                <h5>Patrick Langus</h5>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img src="../../images/assets/pizza-6.jpg" alt="">
+              <div class="opinion">
+                <h1>Title 4</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, explicabo!</p>
+                <h5>Jan Langus</h5>
+              </div>
+            </div>
+
+          </div>
+          
         </section>
   
         <section class="gallery">
@@ -292,9 +329,12 @@
   </script>
 
 
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <!-- <script src="../src/vendor/flickity.pkgd.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="./vendor/range-slider.min.js"></script>
   <script src="js/app.js" type="module"></script>
+
 </body>
 </html>
