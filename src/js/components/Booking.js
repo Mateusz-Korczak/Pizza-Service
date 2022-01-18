@@ -244,12 +244,13 @@ class Booking {
       phone: thisBooking.dom.phoneInput.value,
       address: thisBooking.dom.addressInput.value,
     };
+
     for (let option of thisBooking.dom.starters) {
       if (option.checked) {
         payload.starters.push(option.value);
       }
     }
-    console.log('wyslano booking: ', payload);
+
     const options = {
       method: 'POST',
       headers: {

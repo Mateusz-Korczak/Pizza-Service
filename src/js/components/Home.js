@@ -42,7 +42,6 @@ class Home {
     );
     thisHome.dom.starters =
       thisHome.dom.wrapper.querySelectorAll('.checkbox input');
-    console.log(thisHome.dom.starters);
   }
 }
 
