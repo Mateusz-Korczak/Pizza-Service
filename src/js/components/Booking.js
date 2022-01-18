@@ -261,11 +261,6 @@ class Booking {
 
     fetch(url, options).then(function (response) {
       if (response.ok) {
-        console.log('poszlo!');
-        console.log('date: ', payload.date);
-        console.log('hour: ', payload.hour);
-        console.log('duration: ', payload.duration);
-        console.log('table: ', payload.table);
         thisBooking.makeBooked(
           payload.date,
           payload.hour,
